@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Layout from "../../components/Layout";
 
 function Home() {
+  const [search, setSearch] = useState("");
+
   return (
     <Layout>
       <form action="">
@@ -14,10 +17,11 @@ function Home() {
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 placeholder="Cidade, Estado ou País"
+                onBlur={(e) => setSearch(e.target.value)}
               ></input>
-              <button type="submit" className="btn btn-primary">
+              <Link to={`/results/${search}`} className="btn btn-primary">
                 Buscar
-              </button>
+              </Link>
             </div>
           </div>
         </div>
