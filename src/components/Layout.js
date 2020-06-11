@@ -3,10 +3,8 @@ import React from "react";
 function components({ children }) {
   return (
     <div class="container-fluid">
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          Geonames
-        </a>
+      <nav class="navbar navbar-light bg-light mb-3">
+        <p className="mb-0">Geonames</p>
       </nav>
       {children}
     </div>
